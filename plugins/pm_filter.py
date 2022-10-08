@@ -396,19 +396,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "pages":
         await query.answer()
-
-    elif query.data == "minfo":
-        await query.answer(text=script.MINFO, show_alert=True)
-
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('♚ Bᴏᴛ Oᴡɴᴇʀ', callback_data="owner_info"),
-            InlineKeyboardButton('🤖 Deploy', url='https://youtu.be/fyFKnde_Jz8')
+            InlineKeyboardButton('🤴 Oᴡɴᴇʀ', url='https://t.me/cinemaclubcc'),
+            InlineKeyboardButton('⌬ Gʀᴏᴜᴘ', url='https://t.me/Mallu_Movie_Hub_Group')
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('〄 Hᴇʟᴘ', callback_data='help'),
+            InlineKeyboardButton('⍟ Aʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
