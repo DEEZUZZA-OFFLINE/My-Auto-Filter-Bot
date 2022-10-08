@@ -646,7 +646,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
+        cap = f"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a></b>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
@@ -708,7 +708,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("I couldn't find anything related to that\nDid you mean any one of these?", reply_markup=InlineKeyboardMarkup(btn))
+    await msg.reply("<b>I couldn't find anything related to that\nDid you mean any one of these?</b>", reply_markup=InlineKeyboardMarkup(btn))
     
 
 async def manual_filters(client, message, text=False):
