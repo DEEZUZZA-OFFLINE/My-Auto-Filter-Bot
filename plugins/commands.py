@@ -221,8 +221,17 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        )
-                    
+        reply_markup=InlineKeyboardMarkup(
+            [
+             [
+              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/cinemaclubcc'),
+              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url='https://t.me/cinemaclubcc')
+            ],[
+              InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="https://t.me/cinemaclubcc")
+              ]
+             ]
+         )
+    )
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
