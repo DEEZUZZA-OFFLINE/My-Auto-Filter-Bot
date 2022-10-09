@@ -6,7 +6,7 @@ Mʏ Nᴀᴍᴇ Is<a href=https://t.me/{}>{}</a>, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏ
     ABOUT_TXT = """
 <b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
     
-• ꜰᴜʟʟ ɴᴀᴍᴇ : ᴊᴏᴇʟ ᴋᴜʀɪᴀɴ ʙɪᴊᴜ
+• ꜰᴜʟʟ ɴᴀᴍᴇ : ᴅᴇᴇᴢᴜᴢᴢᴀ ᴏғғɪᴄɪᴀʟ 
 • ᴜꜱᴇʀɴᴀᴍᴇ : @cinemaclubcc
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='https://t.me/cinemaclubcc'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     SOURCE_TXT = """<b>NOTE:</b>
