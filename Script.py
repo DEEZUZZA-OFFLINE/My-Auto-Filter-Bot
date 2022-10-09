@@ -10,8 +10,8 @@ Mʏ Nᴀᴍᴇ Is<a href=https://t.me/{}>{}</a>, I Cᴀɴ Pʀᴏᴠɪᴅᴇ Mᴏ
 • ᴜꜱᴇʀɴᴀᴍᴇ : @cinemaclubcc
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴘᴍ ʟɪɴᴋ : <a href='https://t.me/cinemaclubcc'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
     SOURCE_TXT = """<b>NOTE:</b>
-- 𝑹ᴇxɪᴇ ⚡ is a open source project. 
-- Source - https://t.me/+MQ34HqhF9ZJmYjRl  
+- 𝑹ᴇxɪᴇ ⚡ ɪs ᴀ ᴏᴘᴇɴ sᴏᴜʀᴄᴇ ᴘʀᴏᴊᴇᴄᴛ. 
+- sᴏᴜʀᴄᴇ - https://t.me/+MQ34HqhF9ZJmYjRl  
 
 <b>DEVS:</b>
 - <a href=https://t.me/+yP9ckmsoGF1kNDNl>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a>"""
