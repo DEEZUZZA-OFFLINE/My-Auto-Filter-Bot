@@ -660,7 +660,7 @@ async def auto_filter(client, msg, spoll=False):
             await hmm.delete()
             await client.send_video(
                 chat_id=message.chat.id,
-                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+                photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
                 caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
                 reply_to_message_id=message.message_id
             )
@@ -671,7 +671,7 @@ async def auto_filter(client, msg, spoll=False):
             await fek.delete()
             await client.send_video(
                 chat_id=message.chat.id,
-                video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+                photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
                 caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
                 reply_to_message_id=message.message_id
             )
@@ -681,7 +681,7 @@ async def auto_filter(client, msg, spoll=False):
         await fuk.delete()
         await client.send_video(
             chat_id=message.chat.id,
-            video="https://telegra.ph/file/0cddf1c687a0dbc256313.mp4",
+            photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
             caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
             reply_to_message_id=message.message_id
         )
