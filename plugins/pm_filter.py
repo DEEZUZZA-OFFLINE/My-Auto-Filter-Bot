@@ -658,7 +658,7 @@ async def auto_filter(client, msg, spoll=False):
             hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(300)
             await hmm.delete()
-            await client.send_video(
+            await client.reply_photo(
                 chat_id=message.chat.id,
                 photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
                 caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
@@ -666,20 +666,20 @@ async def auto_filter(client, msg, spoll=False):
             )
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(300)
             await fek.delete()
-            await client.send_video(
+            await client.reply_photo(
                 chat_id=message.chat.id,
                 photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
                 caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
                 reply_to_message_id=message.message_id
             )
     else:
-        fuk = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(300)
         await fuk.delete()
-        await client.send_video(
+        await client.reply_photo(
             chat_id=message.chat.id,
             photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
             caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
