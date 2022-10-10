@@ -648,7 +648,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        msg.reply_photo("https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
+        msg.photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
         cap =f"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n<b>┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a></b>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
     if imdb and imdb.get('poster'):
         try:
