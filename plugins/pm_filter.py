@@ -647,8 +647,7 @@ async def auto_filter(client, msg, spoll=False):
             url = imdb['url'],
             **locals()
         )
-    else:
-        msg.photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
+    else:  
         cap =f"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n<b>┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a></b>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
     if imdb and imdb.get('poster'):
         try:
@@ -656,36 +655,12 @@ async def auto_filter(client, msg, spoll=False):
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
             poster = pic.replace('.jpg', "._V1_UX360.jpg")
-            hmm = await message.reply_photo(photo=poster, caption=cap, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(300)
-            await hmm.delete()
-            await client.reply_photo(
-                chat_id=message.chat.id,
-                photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
-                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
-                reply_to_message_id=message.message_id
-            )
+             await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-            await asyncio.sleep(300)
-            await fek.delete()
-            await client.reply_photo(
-                chat_id=message.chat.id,
-                photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
-                caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
-                reply_to_message_id=message.message_id
-            )
+            await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     else:
-        fuk = await message.reply_text(text=cap, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn))
-        await asyncio.sleep(300)
-        await fuk.delete()
-        await client.reply_photo(
-            chat_id=message.chat.id,
-            photo="https://telegra.ph/file/c4207d859c6c8a7dbdeb9.jpg",
-            caption=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ <code>{search}</code> \nBʏ <spoiler>{message.from_user.mention}</spoiler> \nIs Now Cʟᴏꜱᴇᴅ 🗑️\n\n@TmMainChannel",
-            reply_to_message_id=message.message_id
-        )
+        await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
     if spoll:
         await msg.message.delete()
         
