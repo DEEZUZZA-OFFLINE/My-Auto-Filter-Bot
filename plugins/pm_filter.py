@@ -648,7 +648,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = photo="https://telegra.ph/file/b2acb2586995d0e107760.jpg",>\nf"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n<b>┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a></b>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
+        cap =f"<b>🎪 ᴛɪᴛɪʟᴇ {search}</b>\n\n<b>┏🤴 ᴀsᴋᴇᴅ ʙʏ :{message.from_user.mention}</b>\n<b>┣⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href='http://t.me/Rexie_Auto_Filter_Bot'>𝑹ᴇxɪᴇ ⚡</a></b>\n<b>┗🍁 ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/CINEMA_CITY_UPDATES'>ᴄɪɴᴇᴍᴀ ᴄɪᴛʏ ᴄʜᴀɴɴᴇʟ</a></b>\n\n<b>ᴀꜰᴛᴇʀ 30 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ</b>\n\n<b>★ ᴘᴏᴡᴇʀᴇᴅ ʙʏ <a href='https://t.me/Mallu_Movie_Hub_Group'>©️Mallu Movie Hub Group ™️</a></b>"
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
