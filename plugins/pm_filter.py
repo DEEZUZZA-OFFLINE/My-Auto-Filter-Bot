@@ -339,12 +339,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
         f_caption=files.caption
         if CUSTOM_FILE_CAPTION:
             try:
-                f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                                                       file_size='' if size is None else size,
+                                                       file_caption='' if f_caption is None else f_caption)
             except Exception as e:
                 logger.exception(e)
-            f_caption=f_caption
+            f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
+        buttons = [
+            [
+                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
+                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
+            ],
+            [
+                InlineKeyboardButton('🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖', url=f'https://t.me/tmmainchannel/4')
+            ]
+            ]
          
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -381,19 +392,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
         f_caption=files.caption
         if CUSTOM_FILE_CAPTION:
             try:
-                f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='' if f_caption is None else f_caption)
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                                                       file_size='' if size is None else size,
+                                                       file_caption='' if f_caption is None else f_caption)
             except Exception as e:
                 logger.exception(e)
-                f_caption=f_caption
+                f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
+        buttons = [
+            [
+                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
+                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
+            ],
+            [
+                InlineKeyboardButton('🤖𓂀 ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻 𓂀🤖', url=f'https://t.me/tmmainchannel/4')
+            ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
-            caption=f_caption
-            )
-
+            caption=f_caption,
+            protect_content=True if ident == 'checksubp' else False
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
