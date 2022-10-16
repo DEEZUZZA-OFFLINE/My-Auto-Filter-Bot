@@ -91,12 +91,12 @@ async def next_page(bot, query):
             [InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"ᴘᴀɢᴇ {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"ᴘᴀɢᴇ {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append([InlineKeyboardButton(f"{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"ᴘᴀɢᴇ {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton(f"{round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
                 InlineKeyboardButton("ɴᴇxᴛ", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
@@ -347,16 +347,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-        buttons = [
-            [
-                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
-                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
-            ],
-            [
-                InlineKeyboardButton('🤖𓂀ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻𓂀🤖', url=f'https://t.me/tmmainchannel/4')
-            ]
-            ]
-         
+        
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
@@ -400,15 +391,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
-        buttons = [
-            [
-                InlineKeyboardButton('𓂀𝕄𝕆𝕍𝕀𝔼𝕊𓂀', url='https://t.me/technomoviescollection'),
-                InlineKeyboardButton('彡[ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ]彡', url='https://t.me/tmmainchannel')
-            ],
-            [
-                InlineKeyboardButton('🤖𓂀 ℍ𝕆𝕎 𝕋𝕆 𝔻𝕆𝕎ℕ𝕃𝕆𝔸𝔻 𓂀🤖', url=f'https://t.me/tmmainchannel/4')
-            ]
-            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
@@ -431,13 +413,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('✇ Jᴏɪɴ Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ ✇', url='https://t.me/CINEMA_CITY_UPDATES'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
@@ -460,14 +435,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton(' Hᴏᴍᴇ', callback_data='start'),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗆𝗒 𝖧𝖾𝗅𝗉 𝗆𝗈𝖽𝗎𝗅𝖾")
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
@@ -482,14 +449,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔐 Cʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Check About Me 😉")
         await query.message.edit_text(
             text=script.ABOUT_TXT.format(temp.B_NAME),
             reply_markup=reply_markup,
@@ -499,14 +458,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='about')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("My Source 🤔")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.SOURCE_TXT,
@@ -518,14 +469,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('Bᴜᴛᴛᴏɴs', callback_data='button')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Loading Manual Filter...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.MANUELFILTER_TXT,
@@ -536,14 +479,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='manuelfilter')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Loading Buttons Module...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.BUTTON_TXT,
@@ -554,14 +489,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Loading AutoFilter...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.AUTOFILTER_TXT,
@@ -572,17 +499,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Loading AutoFilter...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=script.AUTOFILTER_TXT,
+            text=script.CONNECTION_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
@@ -591,14 +510,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('👮‍♂️ Aᴅᴍɪɴ', callback_data='admin')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Extars...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
@@ -609,14 +520,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='extra')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Admin Commands ...")
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
@@ -628,14 +531,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('⟲ Rᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Checking My Status...")
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
@@ -655,14 +550,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('⟸ Bᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('⟲ Rᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
-        r=await query.message.reply_text('▣▣▢▢▢▢')
-        a=await r.edit('▣▣▣▢▢▢')
-        v=await a.edit('▣▣▣▣▢▢')
-        i=await v.edit('▣▣▣▣▣▢')
-        n=await i.edit('▣▣▣▣▣▣')
-        await asyncio.sleep(1)
-        await n.delete()
-        await query.answer("Loading...")
         reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = await db.total_users_count()
